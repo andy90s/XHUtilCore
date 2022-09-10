@@ -1,0 +1,39 @@
+{
+  "name": "XHUtilCore",
+  "version": "0.1.0",
+  "summary": "A short description of XHUtilCore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/梁先华/XHUtilCore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "梁先华": "909901234@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/梁先华/XHUtilCore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "XHUtilCore/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 5.6.2"
+    ],
+    "HandyJSON": [
+      "~> 5.0.2"
+    ],
+    "RxCocoa": [
+      "~> 6.5.0"
+    ],
+    "RxSwift": [
+      "~> 6.5.0"
+    ],
+    "SwiftPrettyPrint": [
+      "~> 1.2.0"
+    ]
+  }
+}

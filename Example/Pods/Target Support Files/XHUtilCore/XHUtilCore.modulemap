@@ -1,0 +1,6 @@
+framework module XHUtilCore {
+  umbrella header "XHUtilCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

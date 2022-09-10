@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'  # 官方库
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'XHUtilCore_Example' do
+  pod 'XHUtilCore', :path => '../'
+
+  target 'XHUtilCore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (5.6.2)
+  - ColorizeSwift (1.2.0)
+  - HandyJSON (5.0.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SwiftPrettyPrint (1.2.0):
+    - ColorizeSwift
+  - XHUtilCore (0.1.0):
+    - Alamofire (~> 5.6.2)
+    - HandyJSON (~> 5.0.2)
+    - RxCocoa (~> 6.5.0)
+    - RxSwift (~> 6.5.0)
+    - SwiftPrettyPrint (~> 1.2.0)
+
+DEPENDENCIES:
+  - XHUtilCore (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - ColorizeSwift
+    - HandyJSON
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftPrettyPrint
+
+EXTERNAL SOURCES:
+  XHUtilCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  ColorizeSwift: 4eef354dce7335d7747a0ccacf78afe2b589a1be
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SwiftPrettyPrint: feca848b6aba4de9201e38f73184e9e5ac09da55
+  XHUtilCore: 695ea4bb9d079c568b87530aa413c8d17f433711
+
+PODFILE CHECKSUM: 49549687c2cc4845db06224bf47fbeb44038f809
+
+COCOAPODS: 1.11.2
