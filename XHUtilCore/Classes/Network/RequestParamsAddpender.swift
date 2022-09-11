@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class RequestParamsAppender: NSObject {
+open class RequestParamsAppender: NSObject {
     var url: URL
     var params:Dictionary = [String: Any]()
     
@@ -16,13 +16,13 @@ class RequestParamsAppender: NSObject {
         self.url = URL(string: url)!
     }
     
-    func interface(url: String) -> RequestParamsAppender {
+    public func interface(url: String) -> RequestParamsAppender {
         self.url.appendPathComponent(url)
         return self
     }
     
     @discardableResult
-    func append(key: String,value: String) -> RequestParamsAppender {
+    public func append(key: String,value: String) -> RequestParamsAppender {
         //        if value == ""{
         //            return self
         //        }else{
@@ -31,64 +31,64 @@ class RequestParamsAppender: NSObject {
     }
     
     @discardableResult
-    func append(key: String,value: String?) -> RequestParamsAppender {
+    public func append(key: String,value: String?) -> RequestParamsAppender {
         if  value?.isEmpty ?? true ||  value == ""  { return self }
         params += ["\(key)":"\(value ?? "")"]
         return self
     }
     
     @discardableResult
-    func append(key: String, value: Int?) -> RequestParamsAppender {
+    public func append(key: String, value: Int?) -> RequestParamsAppender {
         if value == nil  { return self }
         params += ["\(key)":"\(value ?? 0)"]
         return self
     }
     
     @discardableResult
-    func append(key: String, value: Int) -> RequestParamsAppender {
+    public func append(key: String, value: Int) -> RequestParamsAppender {
         params += ["\(key)":"\(value )"]
         return self
     }
     
     @discardableResult
-    func append(key: String, value: Int64) -> RequestParamsAppender {
+    public func append(key: String, value: Int64) -> RequestParamsAppender {
         params += ["\(key)":"\(value)"]
         return self
     }
     
     @discardableResult
-    func append(key: String, value: Double) -> RequestParamsAppender {
+    public func append(key: String, value: Double) -> RequestParamsAppender {
         params += ["\(key)":"\(value)"]
         return self
     }
 
     @discardableResult
-    func append(key: String, value: Double?) -> RequestParamsAppender {
+    public func append(key: String, value: Double?) -> RequestParamsAppender {
         if value == nil  { return self }
         params += ["\(key)":"\(value ?? 0)"]
         return self
     }
     
     @discardableResult
-    func append(key: String,data: Data) -> RequestParamsAppender {
+    public func append(key: String,data: Data) -> RequestParamsAppender {
         params += ["\(key)": data]
         return self
     }
     
     @discardableResult
-    func append(key: String,url: URL) -> RequestParamsAppender {
+    public func append(key: String,url: URL) -> RequestParamsAppender {
         params += ["\(key)":"\(url)"]
         return self
     }
 
     @discardableResult
-    func append(key:String,array:[Any]) -> RequestParamsAppender {
+    public func append(key:String,array:[Any]) -> RequestParamsAppender {
         params += ["\(key)":array]
         return self
     }
     
     @discardableResult
-    func append(key:String,array:[String]) -> RequestParamsAppender {
+    public func append(key:String,array:[String]) -> RequestParamsAppender {
         params += ["\(key)":array]
         return self
     }
@@ -104,7 +104,7 @@ class RequestParamsAppender: NSObject {
 //        return self.params
 //    }
     
-    class func build(url: String) -> RequestParamsAppender {
+    public class func build(url: String) -> RequestParamsAppender {
         return RequestParamsAppender(url: url)
     }
 }

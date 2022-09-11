@@ -8,15 +8,26 @@
 
 import UIKit
 import XHUtilCore
+import HandyJSON
+
+struct SimpleModel: HandyJSON {
+
+}
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let arr = [1,2,3,4,5]
-        debuglog("得到的数组是\(arr)")
+//        let arr = [1,2,3,4,5]
+//        debuglog("得到的数组是\(arr)")
+//        debuglog("数组", arr)
+        
     }
+    
+//    func login(account: String,pwd: String)->Observable<BaseResponse<SimpleModel>> {
+//        let params = RequestParamsAppender.build(url: "")
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

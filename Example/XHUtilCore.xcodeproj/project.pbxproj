@@ -209,7 +209,7 @@
 				CLASSPREFIX = XH;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "梁先华";
+				ORGANIZATIONNAME = com.github.andy90s;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;

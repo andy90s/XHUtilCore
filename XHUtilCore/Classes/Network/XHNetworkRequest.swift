@@ -10,37 +10,40 @@ import HandyJSON
 import Alamofire
 import RxSwift
 
-struct BaseResponse<T: HandyJSON>: HandyJSON {
-    var code : Int = -1
-    var msg : String = ""
-    var data : T? = nil
+public struct BaseResponse<T: HandyJSON>: HandyJSON {
+    public var code : Int = -1
+    public var msg : String = ""
+    public var data : T? = nil
     
-    func valid() -> Bool {
+    public func valid() -> Bool {
         return true
     }
+    
+    public init() {}
+    
 }
 
-class XHNetworkRequest {
+open class XHNetworkRequest {
     
-    enum NetRequestError: Error {
+    public enum NetRequestError: Error {
         case URLNotFound
         case DownloadFailed
         case ServerError(Int,String)
         case ResponseDataEmpty
     }
     
-    enum EncodingType{
+    public enum EncodingType{
         case `default`
         case json
     }
     
-    static let sharedSessionManager: Alamofire.Session = {
+    public static let sharedSessionManager: Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 15
         return Alamofire.Session(configuration: configuration)
     }()
     
-    class func request<T: HandyJSON>(params: RequestParamsAppender,method: HTTPMethod,progress: Bool = true,ignoreError:Bool = false,encodingType:EncodingType = .default,isHead:Bool = false,header:[String:String] = [:]) -> Observable<BaseResponse<T>>{
+    public class func request<T: HandyJSON>(params: RequestParamsAppender,method: HTTPMethod,progress: Bool = true,ignoreError:Bool = false,encodingType:EncodingType = .default,isHead:Bool = false,header:[String:String] = [:]) -> Observable<BaseResponse<T>>{
         return Observable<BaseResponse<T>>.create{ ob in
 //            var header = [String:String]()
 //            if app.localLanguage == .ZH {
